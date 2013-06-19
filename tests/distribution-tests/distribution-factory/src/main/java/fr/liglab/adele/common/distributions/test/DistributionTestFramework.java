@@ -46,15 +46,6 @@ public class DistributionTestFramework extends Felix {
 
 	public void start() throws BundleException {
 		super.start();
-		
-		/*
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// Interrupted
-		}
-		*/
-		
 		waitForStability(getBundleContext());
 	}
 
@@ -78,7 +69,7 @@ public class DistributionTestFramework extends Felix {
 		while (!bundleStability && count < 500) {
 			System.out.println("Waiting for stability " + count);
 			try {
-				Thread.sleep(100);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
 				// Interrupted
 			}

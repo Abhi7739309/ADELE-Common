@@ -123,7 +123,7 @@ public abstract class AbstractDistributionBaseTest {
 			try {
 				ServiceReference[] refs = context.getServiceReferences(Factory.class.getName(), null);
 				count1 = refs.length;
-				Thread.sleep(500);
+				Thread.sleep(50);
 				refs = context.getServiceReferences(Factory.class.getName(), "(factory.state="+Factory.VALID+")");
 				count2 = refs.length;
 				serviceStability = count1 == count2;
