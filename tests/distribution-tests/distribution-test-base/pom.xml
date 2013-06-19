@@ -61,6 +61,11 @@
 			<version>${url.version}</version>
 			<!-- <scope>test</scope> -->
 		</dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.url</groupId>
+            <artifactId>pax-url-wrap</artifactId>
+            <version>1.5.2</version>
+        </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

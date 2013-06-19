@@ -1,1 +1,1 @@
-java -jar bin/felix.jar
+java %* -jar bin/felix.jar
