@@ -185,7 +185,7 @@ public abstract class AbstractDistributionBaseTest {
 	}
 
 	protected Object getService(BundleContext context, Class clazz, String filter) {
-		ServiceReference<?>[] references;
+		ServiceReference[] references;
 		try {
 			references = context.getServiceReferences(clazz.getName(), filter);
 			if (references == null) {
