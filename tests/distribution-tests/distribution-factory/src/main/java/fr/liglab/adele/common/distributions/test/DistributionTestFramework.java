@@ -105,7 +105,6 @@ public class DistributionTestFramework extends Felix {
 
 		if (count >= 500) {
 			System.err.println("Service stability isn't reached after 500 tries (" + count1 + " != " + count2);
-			showUnstableBundles(context);
 			throw new IllegalStateException("Cannot reach the service stability");
 		}
 
@@ -134,17 +133,12 @@ public class DistributionTestFramework extends Felix {
 	 * @param bc the bundle context
 	 * @return <code>true</code> if every bundles are activated.
 	 */
-	private boolean showUnstableBundles(BundleContext bc) {
-		boolean stability = true;
+	private void showUnstableBundles(BundleContext bc) {
 		Bundle[] bundles = bc.getBundles();
 		for (int i = 0; i < bundles.length; i++) {
 			int state = bundles[i].getState();
-			stability = stability && ((state == Bundle.ACTIVE) || (state == Bundle.RESOLVED));
-			if (!((state == Bundle.ACTIVE) || (state == Bundle.RESOLVED))) {
-				System.err.println("Waiting to stability for: " + bundles[i].getSymbolicName() + " : " + state);
-			}
+    		System.err.println("Waiting to stability for: " + bundles[i].getSymbolicName() + " : " + state);
 		}
-		return stability;
 	}
 
 }

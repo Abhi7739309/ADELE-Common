@@ -288,7 +288,7 @@ public class DistributionFrameworkFactory implements FrameworkFactory {
 	     * </p>
 	     * @return A <tt>Properties</tt> instance or <tt>null</tt> if there was an error.
 	    **/
-	    public static Map<String, String> loadConfigProperties()
+	    public Map<String, String> loadConfigProperties()
 	    {
 	        // The config properties file is either specified by a system
 	        // property or it is in the conf/ directory of the Felix
@@ -330,9 +330,13 @@ public class DistributionFrameworkFactory implements FrameworkFactory {
 	            }
 	            else
 	            {
-	                // Can't figure it out so use the current directory as default.
-	                confDir = new File(System.getProperty("user.dir"), CONFIG_DIRECTORY);
-	            }
+                    try {
+                        confDir = new File(getRootDir() , CONFIG_DIRECTORY );
+                    } catch (IOException e) {
+                        System.err.print("Main: " + e);
+                        return null;
+                    }
+                }
 
 	            try
 	            {
