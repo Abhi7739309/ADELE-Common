@@ -2,7 +2,56 @@
 <license-lookup xmlns="https://source.jasig.org/schemas/maven-notice-plugin/license-lookup"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://source.jasig.org/schemas/maven-notice-plugin/license-lookup https://source.jasig.org/schemas/maven-notice-plugin/license-lookup/license-lookup-v1.0.xsd">
+    
        <artifact>
+          <groupId>org.scala-tools</groupId>
+          <artifactId>scala-stm_2.9.1</artifactId>
+          <version>0.4</version>
+          <license>BSD license</license>
+          <name>Copyright (c) 2009-2012 Stanford University</name>
+       </artifact>
+       <artifact>
+          <groupId>org.scala-tools.testing</groupId>
+          <artifactId>test-interface</artifactId>
+          <version>0.5</version>
+       </artifact>
+       <artifact>
+          <groupId>org.specs2</groupId>
+          <artifactId>specs2-scalaz-core_2.9.1</artifactId>
+          <version>6.0.1</version>
+       </artifact>
+       <artifact>
+          <groupId>org.specs2</groupId>
+          <artifactId>specs2_2.9.1</artifactId>
+          <version>1.7.1</version>
+       </artifact>
+       <artifact>
+          <groupId>play</groupId>
+          <artifactId>anorm_2.9.1</artifactId>
+          <version>2.0</version>
+       </artifact>
+       <artifact>
+          <groupId>play</groupId>
+          <artifactId>play-test_2.9.1</artifactId>
+          <version>2.0</version>
+       </artifact>
+       <artifact>
+          <groupId>play</groupId>
+          <artifactId>play_2.9.1</artifactId>
+          <version>2.0</version>
+       </artifact>
+       <artifact>
+          <groupId>play</groupId>
+          <artifactId>templates_2.9.1</artifactId>
+          <version>2.0</version>
+       </artifact>
+       <artifact>
+          <groupId>securesocial</groupId>
+          <artifactId>securesocial_2.9.1</artifactId>
+          <version>2.0.8</version>
+       </artifact>
+    
+    <artifact>
           <groupId>libusb.java</groupId>
           <artifactId>ch.ntb.usb</artifactId>
           <version>0.5.9</version>
