@@ -2,6 +2,25 @@
 <license-lookup xmlns="https://source.jasig.org/schemas/maven-notice-plugin/license-lookup"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://source.jasig.org/schemas/maven-notice-plugin/license-lookup https://source.jasig.org/schemas/maven-notice-plugin/license-lookup/license-lookup-v1.0.xsd">
+    
+    <artifact>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.gogo.runtime</artifactId>
+          <version>0.10.0</version>
+          <license>Apache License, Version 2.0</license>       
+    </artifact>
+    <artifact>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.gogo.shell</artifactId>
+          <version>0.10.0</version>
+          <license>Apache License, Version 2.0</license>       
+    </artifact>
+    <artifact>
+          <groupId>org.eclipse.osgi</groupId>
+          <artifactId>org.eclipse.osgi</artifactId>
+          <version>3.7.0.v20110124-0830</version>
+          <license>The Eclipse Public License (EPL), version 1.0</license>
+    </artifact>
     <artifact>
        <groupId>org.osgi</groupId>
        <artifactId>org.osgi.compendium</artifactId>
