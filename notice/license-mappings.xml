@@ -14,41 +14,49 @@
           <groupId>org.scala-tools.testing</groupId>
           <artifactId>test-interface</artifactId>
           <version>0.5</version>
+          <license>MIT License</license>
        </artifact>
        <artifact>
           <groupId>org.specs2</groupId>
           <artifactId>specs2-scalaz-core_2.9.1</artifactId>
           <version>6.0.1</version>
+          <license>MIT License</license>
        </artifact>
        <artifact>
           <groupId>org.specs2</groupId>
           <artifactId>specs2_2.9.1</artifactId>
           <version>1.7.1</version>
+          <license>MIT License</license>
        </artifact>
        <artifact>
           <groupId>play</groupId>
           <artifactId>anorm_2.9.1</artifactId>
           <version>2.0</version>
+          <license>Apache License, Version 2.0</license>       
        </artifact>
        <artifact>
           <groupId>play</groupId>
           <artifactId>play-test_2.9.1</artifactId>
           <version>2.0</version>
+          <license>Apache License, Version 2.0</license>       
        </artifact>
        <artifact>
           <groupId>play</groupId>
           <artifactId>play_2.9.1</artifactId>
           <version>2.0</version>
+          <license>Apache License, Version 2.0</license>       
        </artifact>
        <artifact>
           <groupId>play</groupId>
           <artifactId>templates_2.9.1</artifactId>
           <version>2.0</version>
+          <license>Apache License, Version 2.0</license>       
        </artifact>
        <artifact>
           <groupId>securesocial</groupId>
           <artifactId>securesocial_2.9.1</artifactId>
           <version>2.0.8</version>
+          <license>Apache License, Version 2.0</license>       
        </artifact>
     
     <artifact>
