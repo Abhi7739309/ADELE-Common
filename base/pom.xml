@@ -87,7 +87,7 @@
       <licensePluginVersion>1.4.0</licensePluginVersion>
       <depgraphPluginVersion>3.1</depgraphPluginVersion>
       <overviewPluginVersion>1.6</overviewPluginVersion>				
-      <deploymentPackageVersion>1.0.1</deploymentPackageVersion>
+      <deploymentPackageVersion>1.0.2-SNAPSHOT</deploymentPackageVersion>
       <antPluginVersion>1.7</antPluginVersion>
       <gmavenPluginVersion>1.0</gmavenPluginVersion>
       <assemblyPluginVersion>2.3</assemblyPluginVersion>
