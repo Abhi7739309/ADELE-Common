@@ -74,6 +74,8 @@
 			<!-- <scope>test</scope> -->
 		</dependency>
 		<!-- Distribution to test -->
+    
+    <!-- 
 		<dependency>
 			<groupId>${distrib.groupId}</groupId>
 			<artifactId>${distrib.artifactId}</artifactId>
@@ -81,6 +83,20 @@
 			<type>osgi-distribution</type>
 			<scope>test</scope>
 		</dependency>
+    
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>distribution.factory</artifactId>
+      <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.framework</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    
+     -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -91,24 +107,22 @@
 			<artifactId>slf4j-api</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>distribution.factory</artifactId>
-			<version>${project.version}</version>
-			<exclusions>
-				<exclusion>
-					<!-- declare the exclusion here -->
-					<groupId>org.apache.felix</groupId>
-					<artifactId>org.apache.felix.framework</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 	</dependencies>
 
 
 
 	<build>
 		<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+
+  <!--     
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -128,14 +142,6 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.ops4j.pax.exam</groupId>
 				<artifactId>maven-paxexam-plugin</artifactId>
 				<executions>
@@ -147,6 +153,9 @@
 					</execution>
 				</executions>
 			</plugin>
+      
+ -->      
 		</plugins>
 	</build>
+  
 </project>
