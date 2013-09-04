@@ -30,7 +30,7 @@
       <!-- ADELE Projects -->
       <roseVersion>1.2.2</roseVersion>
 
-      <osgiDistribPlugin>1.0.2</osgiDistribPlugin>
+      <osgiDistribPlugin>1.0.3-SNAPSHOT</osgiDistribPlugin>
       <!-- Common dependencies -->
       <!-- iPOJO -->
       <iPojoVersion>1.10.1</iPojoVersion>
@@ -91,7 +91,7 @@
       <antPluginVersion>1.7</antPluginVersion>
       <gmavenPluginVersion>1.0</gmavenPluginVersion>
       <assemblyPluginVersion>2.3</assemblyPluginVersion>
-      <playPluginVersion>1.2.2</playPluginVersion>
+      <playPluginVersion>1.2.3</playPluginVersion>
       <lifecyclePluginVersion>1.0.0</lifecyclePluginVersion>
       <failsafePluginVersion>2.12.4</failsafePluginVersion>
       <mavenDeployPlugin>2.7</mavenDeployPlugin>
