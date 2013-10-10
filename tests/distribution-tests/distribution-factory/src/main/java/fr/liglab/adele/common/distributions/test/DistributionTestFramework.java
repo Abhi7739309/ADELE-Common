@@ -90,13 +90,17 @@ public class DistributionTestFramework extends Felix {
 		while (!serviceStability && count < 500) {
 			try {
 				ServiceReference[] refs = context.getServiceReferences((String) null, null);
-				count1 = refs.length;
+                if(refs!=null){
+				    count1 = refs.length;
+                }
 				Thread.sleep(50);
 				refs = context.getServiceReferences((String) null, null);
-				count2 = refs.length;
+                if(refs!=null){
+				    count2 = refs.length;
+                }
 				serviceStability = count1 == count2;
 			} catch (Exception e) {
-				System.err.println(e);
+				e.printStackTrace();
 				serviceStability = false;
 				// Nothing to do, while recheck the condition
 			}
@@ -104,7 +108,8 @@ public class DistributionTestFramework extends Felix {
 		}
 
 		if (count >= 500) {
-			System.err.println("Service stability isn't reached after 500 tries (" + count1 + " != " + count2);
+			System.err.println("Service stability isn't reached after 500 tries (" + count1 + " != " + count2+")");
+            showUnstableBundles(context);
 			throw new IllegalStateException("Cannot reach the service stability");
 		}
 
@@ -123,7 +128,7 @@ public class DistributionTestFramework extends Felix {
 			int state = bundles[i].getState();
 			stability = stability && ((state == Bundle.ACTIVE) || (state == Bundle.RESOLVED));
 		}
-		System.out.println("Total cherged bundles " + bundles.length);
+		System.out.println("Total charged bundles " + bundles.length);
 		return stability;
 	}
 

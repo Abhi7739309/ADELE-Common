@@ -155,13 +155,17 @@ public abstract class AbstractDistributionBaseTest {
 		while (!serviceStability && count < 500) {
 			try {
 				ServiceReference[] refs = context.getServiceReferences(Factory.class.getName(), null);
-				count1 = refs.length;
+                if(refs != null){
+				    count1 = refs.length;
+                }
 				Thread.sleep(50);
 				refs = context.getServiceReferences(Factory.class.getName(), "(factory.state=" + Factory.VALID + ")");
-				count2 = refs.length;
+                if(refs != null){
+				    count2 = refs.length;
+                }
 				serviceStability = count1 == count2;
 			} catch (Exception e) {
-				System.err.println(e);
+				e.printStackTrace();
 				serviceStability = false;
 				// Nothing to do, while recheck the condition
 			}
@@ -169,7 +173,7 @@ public abstract class AbstractDistributionBaseTest {
 		}
 
 		if (count >= 500) {
-			System.err.println("Service stability isn't reached after 500 tries (" + count1 + " != " + count2);
+			System.err.println("Service stability isn't reached after 500 tries (" + count1 + " != " + count2+")");
 			throw new IllegalStateException("Cannot reach the service stability");
 		}
 	}
