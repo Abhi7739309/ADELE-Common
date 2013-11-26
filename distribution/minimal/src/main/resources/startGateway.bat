@@ -1,1 +1,1 @@
-java %* -jar bin/felix.jar
+java %* -Dchameleon.home=.  -jar bin/felix.jar --interactive

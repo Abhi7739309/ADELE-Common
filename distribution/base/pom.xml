@@ -40,15 +40,6 @@
      </dependency>
 
      <dependency>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>org.apache.felix.configadmin</artifactId>
-     </dependency>
-     
-     <dependency>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>org.apache.felix.http.whiteboard</artifactId>
-     </dependency>
-     <dependency>
         <groupId>org.ow2.chameleon.json</groupId>
         <artifactId>json-service-json.org</artifactId>
      </dependency>
@@ -65,13 +56,18 @@
         <artifactId>org.apache.felix.ipojo.handler.extender</artifactId>
      </dependency>
      <dependency>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>org.apache.felix.ipojo.webconsole</artifactId>
+        <groupId>fr.liglab.adele.common</groupId>
+        <artifactId>deployment.package.chameleon</artifactId>
+        <version>${project.version}</version>
      </dependency>
-    
+     <!--
      <dependency>
         <groupId>org.apache.felix</groupId>
-        <artifactId>org.apache.felix.prefs</artifactId>
+        <artifactId>org.apache.felix.http.whiteboard</artifactId>
+     </dependency>
+     <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.ipojo.webconsole</artifactId>
      </dependency>
      <dependency>
         <groupId>org.apache.felix</groupId>
@@ -81,6 +77,13 @@
         <groupId>org.apache.felix</groupId>
         <artifactId>org.apache.felix.webconsole</artifactId>
      </dependency>
+     -->
+     <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.prefs</artifactId>
+     </dependency>
+
+
 	 <dependency>
 		<groupId>org.apache.felix</groupId>
 		<artifactId>org.apache.felix.eventadmin</artifactId>
@@ -98,24 +101,7 @@
 	</dependency>
      
      
-     <dependency>
-        <groupId>de.akquinet.gomobile</groupId>
-        <artifactId>deployment-admin-impl</artifactId>
-     </dependency>
-     <dependency>
-        <groupId>de.akquinet.gomobile</groupId>
-        <artifactId>autoconf-resource-processor</artifactId>
-     </dependency>
-     <dependency>
-        <groupId>fr.liglab.adele.common</groupId>
-        <artifactId>deployment.package.file.install</artifactId>
-        <version>${project.version}</version>
-     </dependency>
-     <dependency>
-        <groupId>fr.liglab.adele.common</groupId>
-        <artifactId>autoload.res.processor</artifactId>
-        <version>${project.version}</version>
-     </dependency>
+
 
   </dependencies>
   
@@ -126,7 +112,7 @@
            <artifactId>maven-osgi-distribution-plugin</artifactId>
            <extensions>true</extensions>
            <configuration>
-              <defaultOutputDirectory>bundle</defaultOutputDirectory>
+              <defaultOutputDirectory>runtime</defaultOutputDirectory>
               <generateScripts>true</generateScripts>
            </configuration>
         </plugin>

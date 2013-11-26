@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.felix.fileinstall.ArtifactInstaller;
 import org.apache.felix.ipojo.annotations.Component;
 import org.apache.felix.ipojo.annotations.Instantiate;
 import org.apache.felix.ipojo.annotations.Invalidate;
@@ -20,6 +19,7 @@ import org.osgi.service.deploymentadmin.DeploymentPackage;
 import org.osgi.service.deploymentadmin.spi.DeploymentSession;
 import org.osgi.service.deploymentadmin.spi.ResourceProcessor;
 import org.osgi.service.deploymentadmin.spi.ResourceProcessorException;
+import org.ow2.chameleon.core.services.AbstractDeployer;
 
 /**
  * This component copy files embedded in deployment packages to the felix autoload directory.
@@ -32,7 +32,7 @@ import org.osgi.service.deploymentadmin.spi.ResourceProcessorException;
 @Component(name="autoload-file-res-proc")
 @Provides(properties={ 
 		@StaticServiceProperty(name="service.pid", value="org.osgi.deployment.rp.autoload",mandatory=false, type="java.lang.String") })
-public class AutoloadFileResourceProcessor implements ResourceProcessor, ArtifactInstaller {
+public class AutoloadFileResourceProcessor implements ResourceProcessor{
 	
 	private BundleContext _context;
 	private DeploymentSession _session = null;
@@ -57,7 +57,7 @@ public class AutoloadFileResourceProcessor implements ResourceProcessor, Artifac
         File persistRoot = new File(root, "autoloadResProc/");
         persistRoot.mkdir();
         _persistencyManager = new PersistencyManager(persistRoot);
-        String fileInstallDirectory = _context.getProperty("felix.fileinstall.dir");
+        String fileInstallDirectory = _context.getProperty("dp.resources.dir");
         if (fileInstallDirectory != null){
             String[]directoryList =  fileInstallDirectory.split(",");
             _autoloadDir = new File(directoryList[0]);
@@ -103,7 +103,7 @@ public class AutoloadFileResourceProcessor implements ResourceProcessor, Artifac
 	private File getTargetFile(String name) {
 		int lastSeparator = name.lastIndexOf(File.separator);
 		String fileName = (lastSeparator == -1) ? name : name.substring(lastSeparator + 1);
-		
+
 		if (_autoloadDir == null) {
 			return null;
 		}
@@ -214,7 +214,7 @@ public class AutoloadFileResourceProcessor implements ResourceProcessor, Artifac
 	@Override
 	public void rollback() {
 		// TODO Auto-generated method stub
-		
+
 		_session = null;
 		clearModifsToApply();
 	}
@@ -223,31 +223,4 @@ public class AutoloadFileResourceProcessor implements ResourceProcessor, Artifac
 	public void cancel() {
 		rollback();
 	}
-
-	/*
-	 * Use these methods to get the file install directory
-	 */
-	@Override
-	public boolean canHandle(File file) {
-		if (_autoloadDir == null) {
-			_autoloadDir = file.getParentFile();
-		}
-		return false;
-	}
-
-	@Override
-	public void install(File artifact) throws Exception {
-		// never called
-	}
-
-	@Override
-	public void update(File artifact) throws Exception {
-		// never called
-	}
-
-	@Override
-	public void uninstall(File artifact) throws Exception {
-		// never called
-	}
-
 }

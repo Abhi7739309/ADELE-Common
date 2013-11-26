@@ -11,15 +11,15 @@
   <!-- Project description -->
   <modelVersion>4.0.0</modelVersion>
   <packaging>bundle</packaging>
-  <artifactId>deployment.package.file.install</artifactId>
+  <artifactId>deployment.package.chameleon</artifactId>
   <name>${productName} :: ${projectName}</name>
-  <description>Deployment Package File Installer</description>
+  <description>Deployment Package For Chameleon</description>
 
   <dependencies>
-	<dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.fileinstall</artifactId>
-    </dependency>
+     <dependency>
+        <groupId>org.ow2.chameleon</groupId>
+        <artifactId>chameleon-core</artifactId>
+     </dependency>
     <dependency>
       <groupId>de.akquinet.gomobile</groupId>
       <artifactId>deployment-package-api</artifactId>
@@ -46,7 +46,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Private-Package>fr.liglab.adele.common.dp.fileinstall</Private-Package>
+            <Private-Package>fr.liglab.adele.common.dp.chameleon</Private-Package>
           </instructions>
         </configuration>
       </plugin>
