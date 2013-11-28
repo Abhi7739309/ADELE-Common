@@ -30,7 +30,6 @@
 
     <modules>
         <module>autoload-res-processor</module>
-        <module>deployment-package-chameleon</module>
         <module>deployment-package-file-install</module>
     </modules>
     <build>

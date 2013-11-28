@@ -46,7 +46,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Private-Package>fr.liglab.adele.common.dp.fileinstall</Private-Package>
+            <Export-Package>fr.liglab.adele.m2mappbuilder.dp.fileinstall</Export-Package>
           </instructions>
         </configuration>
       </plugin>
