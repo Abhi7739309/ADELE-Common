@@ -39,7 +39,7 @@
       <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
       <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
       <ipojoWebconsole>1.7.0</ipojoWebconsole>
-      <chameleonVersion>1.0.0-SNAPSHOT</chameleonVersion>
+      <chameleonVersion>1.0.1</chameleonVersion>
       <!-- Logs -->
       <slf4jVersion>1.7.2</slf4jVersion>
       <log4jVersion>1.2.16</log4jVersion>
@@ -88,7 +88,7 @@
       <licensePluginVersion>1.4.0</licensePluginVersion>
       <depgraphPluginVersion>3.1</depgraphPluginVersion>
       <overviewPluginVersion>1.6</overviewPluginVersion>				
-      <deploymentPackageVersion>1.0.2</deploymentPackageVersion>
+      <deploymentPackageVersion>1.0.3-SNAPSHOT</deploymentPackageVersion>
       <antPluginVersion>1.7</antPluginVersion>
       <gmavenPluginVersion>1.0</gmavenPluginVersion>
       <assemblyPluginVersion>2.3</assemblyPluginVersion>

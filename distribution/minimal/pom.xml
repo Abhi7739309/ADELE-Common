@@ -121,7 +121,8 @@ limitations under the License.
        <dependency>
           <groupId>org.ow2.shelbie</groupId>
           <artifactId>shelbie-startup-console</artifactId>
-       </dependency>       
+       </dependency>     
+       
        <dependency>
           <groupId>de.akquinet.gomobile</groupId>
           <artifactId>deployment-admin-impl</artifactId>
@@ -130,12 +131,18 @@ limitations under the License.
           <groupId>de.akquinet.gomobile</groupId>
           <artifactId>autoconf-resource-processor</artifactId>
        </dependency>
-
+       
        <dependency>
           <groupId>fr.liglab.adele.common</groupId>
           <artifactId>autoload.res.processor</artifactId>
           <version>${project.version}</version>
        </dependency>
+       <dependency>
+          <groupId>fr.liglab.adele.common</groupId>
+          <artifactId>deployment.package.chameleon</artifactId>
+          <version>${project.version}</version>
+       </dependency>
+
             
    </dependencies>
 

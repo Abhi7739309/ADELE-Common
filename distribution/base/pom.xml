@@ -55,11 +55,7 @@
         <groupId>org.apache.felix</groupId>
         <artifactId>org.apache.felix.ipojo.handler.extender</artifactId>
      </dependency>
-     <dependency>
-        <groupId>fr.liglab.adele.common</groupId>
-        <artifactId>deployment.package.chameleon</artifactId>
-        <version>${project.version}</version>
-     </dependency>
+
      <!--
      <dependency>
         <groupId>org.apache.felix</groupId>
@@ -100,7 +96,7 @@
 		<artifactId>xml-shared-preferences</artifactId>	
 	</dependency>
      
-     
+
 
 
   </dependencies>

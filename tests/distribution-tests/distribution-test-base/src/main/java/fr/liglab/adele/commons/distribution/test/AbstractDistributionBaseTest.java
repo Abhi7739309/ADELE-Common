@@ -1,13 +1,5 @@
 package fr.liglab.adele.commons.distribution.test;
 
-import static org.ops4j.pax.exam.CoreOptions.frameworkProperty;
-import static org.ops4j.pax.exam.CoreOptions.junitBundles;
-import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
-import static org.ops4j.pax.exam.CoreOptions.repository;
-import static org.ops4j.pax.exam.CoreOptions.vmOption;
-import static org.ops4j.pax.exam.CoreOptions.when;
-import static org.ops4j.pax.exam.CoreOptions.wrappedBundle;
-
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.util.ArrayList;
@@ -22,6 +14,8 @@ import org.ops4j.pax.exam.options.DefaultCompositeOption;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
+
+import static org.ops4j.pax.exam.CoreOptions.*;
 
 public abstract class AbstractDistributionBaseTest {
 
@@ -56,7 +50,7 @@ public abstract class AbstractDistributionBaseTest {
 	 */
 	public List<Option> config() {
 		List<Option> config = new ArrayList<Option>();
-		config.add(junitBundles());
+		//config.add(junitBundles());
 		config.add(testBaseBundles());
 		config.add(packDebugConfiguration());
 		config.add(mockitoBundles());
@@ -70,7 +64,7 @@ public abstract class AbstractDistributionBaseTest {
 		            "com.springsource.repository.bundles.external"),
 
 		      // Repository required to load harmcrest (OSGi-fied version).
-		      repository("http://repo1.maven.org/maven2/").id("central"),
+		      //repository("http://repo1.maven.org/maven2/").id("central"),
 		      // Mockito without Hamcrest and Objenesis
 		      mavenBundle("org.mockito", "mockito-core", "1.9.5"),
 		      // Hamcrest with a version matching the range expected by Mockito
@@ -99,6 +93,8 @@ public abstract class AbstractDistributionBaseTest {
 													 * So we disable the bootdelegation. this property has no effect on the other
 													 * OSGi implementation.
 													 */
+              frameworkProperty("org.osgi.framework.bootdelegation").value("org.ops4j.*, org.junit.*, junit.*"),
+              systemProperty("org.osgi.framework.bootdelegation").value("org.ops4j.*, org.junit.*, junit.*"),
 		      frameworkProperty("felix.bootdelegation.implicit").value("false"));
 		return apamCoreConfig;
 	}

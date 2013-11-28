@@ -21,6 +21,10 @@
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.framework</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.ow2.chameleon</groupId>
+            <artifactId>chameleon-core</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
