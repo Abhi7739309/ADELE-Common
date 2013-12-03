@@ -29,8 +29,11 @@
 	<name>${productName} :: ${projectName}</name>
 
 	<modules>
-      <module>distribution-tests</module>
-      <!--<module>test-pojosr</module>
+       
+        <module>chameleon-tests</module>
+      <!--
+         <module>distribution-tests</module>
+      <module>test-pojosr</module>
       <module>test-pojosr-example</module>-->
 	</modules>
    <build>
