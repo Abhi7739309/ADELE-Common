@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>chameleon-tests</artifactId>
-
+    <name>${productName} :: ${projectName}</name>
     <build>
         <plugins>
             <plugin>
