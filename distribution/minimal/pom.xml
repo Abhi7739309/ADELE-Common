@@ -34,68 +34,115 @@ limitations under the License.
          <!-- Project dependencies -->
     <dependencies>
             
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.main</artifactId>
-      </dependency>
-           
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.fileinstall</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.gogo.command</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.gogo.runtime</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.gogo.shell</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.ipojo.gogo</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.ipojo</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>org.apache.felix.log</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.osgi</groupId>
-         <artifactId>org.osgi.compendium</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>slf4j-api</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>slf4j-log4j12</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.log4j</groupId>
-         <artifactId>com.springsource.org.apache.log4j</artifactId>
-      </dependency>
-      <dependency>
+       <!-- bin -->
+       <dependency>
+          <groupId>org.ow2.chameleon</groupId>
+          <artifactId>chameleon-core</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-core</artifactId>
+       </dependency>
+       <dependency>
           <groupId>org.apache.felix</groupId>
-          <artifactId>org.apache.felix.http.jetty</artifactId>
-      </dependency>
+          <artifactId>org.apache.felix.framework</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.osgi</groupId>
+          <artifactId>org.osgi.enterprise</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+       </dependency>
+       
+       <!-- core -->
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.configadmin</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.gogo.command</artifactId>
+       </dependency>
+       
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.gogo.runtime</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.ipojo.gogo</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.ipojo</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.ipojo.handler.whiteboard</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.bundles</groupId>
+          <artifactId>ow2-util-i18n</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.bundles</groupId>
+          <artifactId>ow2-util-log</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.shelbie</groupId>
+          <artifactId>shelbie-api</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.shelbie.commands</groupId>
+          <artifactId>shelbie-builtin-commands</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.shelbie</groupId>
+          <artifactId>shelbie-core</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.shelbie.commands</groupId>
+          <artifactId>shelbie-ipojo-commands</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>org.ow2.shelbie</groupId>
+          <artifactId>shelbie-startup-console</artifactId>
+       </dependency>     
+       
+       <dependency>
+          <groupId>de.akquinet.gomobile</groupId>
+          <artifactId>deployment-admin-impl</artifactId>
+       </dependency>
+       <dependency>
+          <groupId>de.akquinet.gomobile</groupId>
+          <artifactId>autoconf-resource-processor</artifactId>
+       </dependency>
+       
+       <dependency>
+          <groupId>fr.liglab.adele.common</groupId>
+          <artifactId>autoload.res.processor</artifactId>
+          <version>${project.version}</version>
+       </dependency>
+       <dependency>
+          <groupId>fr.liglab.adele.common</groupId>
+          <artifactId>deployment.package.chameleon</artifactId>
+          <version>${project.version}</version>
+       </dependency>
 
-        <!--dependency>
-            <groupId>org.glassfish.grizzly.osgi</groupId>
-            <artifactId>grizzly-httpservice</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.ow2.chameleon.commons.grizzly</groupId>
-            <artifactId>grizzly-bundle</artifactId>
-        </dependency-->
             
    </dependencies>
 
@@ -106,14 +153,45 @@ limitations under the License.
                      <artifactId>maven-osgi-distribution-plugin</artifactId>
                      <extensions>true</extensions>
                      <configuration>
-                        <defaultOutputDirectory>bundle</defaultOutputDirectory>
+                        <defaultOutputDirectory>core</defaultOutputDirectory>
                         <generateScripts>true</generateScripts>
                         <outputs>
+                           <!-- bin directory -->
                            <output>
-                              <IncludesArtifactId>org.apache.felix.main</IncludesArtifactId>
+                              <IncludesArtifactId>chameleon-core</IncludesArtifactId>
                               <directory>bin</directory>
                               <outputFileName>felix.jar</outputFileName>
                            </output>
+                           <output>
+                              <IncludesArtifactId>commons-io</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           <output>
+                              <IncludesArtifactId>guava</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           
+                           <output>
+                              <IncludesArtifactId>logback-classic</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           <output>
+                              <IncludesArtifactId>logback-core</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           <output>
+                              <IncludesArtifactId>org.apache.felix.framework</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           <output>
+                              <IncludesArtifactId>org.osgi.enterprise</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                           <output>
+                              <IncludesArtifactId>slf4j-api</IncludesArtifactId>
+                              <directory>bin</directory>
+                           </output>
+                            
                         </outputs>
                      </configuration>
                   </plugin>

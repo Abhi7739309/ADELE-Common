@@ -166,7 +166,7 @@ public class AutoloadFileResourceProcessor implements ResourceProcessor, Artifac
 				if (!targetFile.exists())
 					FileUtil.copyContent(is, targetFile);
 			} catch (IOException e) {
-				throw new ResourceProcessorException(ResourceProcessorException.CODE_OTHER_ERROR, "cannot copy file " + targetFile.getName() + " into file install directory");
+				throw new ResourceProcessorException(ResourceProcessorException.CODE_OTHER_ERROR, "cannot copy file " + targetFile.getAbsolutePath() + " into file install directory: " + _autoloadDir.getAbsolutePath());
 			}
 		}
 		

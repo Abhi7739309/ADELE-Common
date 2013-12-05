@@ -28,6 +28,7 @@ import java.util.Properties;
 import org.apache.felix.framework.util.Util;
 import org.osgi.framework.launch.Framework;
 import org.osgi.framework.launch.FrameworkFactory;
+import org.ow2.chameleon.core.Chameleon;
 
 public class DistributionFrameworkFactory implements FrameworkFactory {
 
@@ -74,7 +75,15 @@ public class DistributionFrameworkFactory implements FrameworkFactory {
 	public Framework newFramework(Map configuration) {
 		// Load system properties.
 		System.out.println("[INFO] initializing Distribution Test Framework");
-		loadSystemProperties();
+        Chameleon cham = null ;
+        try {
+            System.out.println(ROOTDIR);
+            cham = new Chameleon(new File(getRootDir()),false);
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        /*
+        loadSystemProperties();
 
 		// Read configuration properties.
 		Map configProps = loadConfigProperties();
@@ -108,6 +117,8 @@ public class DistributionFrameworkFactory implements FrameworkFactory {
 		}
 		DistributionTestFramework framework = new DistributionTestFramework(configProps);
 		return framework;
+		*/
+        return new ChameleonWrapper(cham);
 	}
 
 
