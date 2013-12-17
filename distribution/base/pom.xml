@@ -109,7 +109,6 @@
            <extensions>true</extensions>
            <configuration>
               <defaultOutputDirectory>runtime</defaultOutputDirectory>
-              <generateScripts>true</generateScripts>
            </configuration>
         </plugin>
      </plugins>

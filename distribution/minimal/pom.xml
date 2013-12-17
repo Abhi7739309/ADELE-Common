@@ -154,7 +154,7 @@ limitations under the License.
                      <extensions>true</extensions>
                      <configuration>
                         <defaultOutputDirectory>core</defaultOutputDirectory>
-                        <generateScripts>true</generateScripts>
+                        <generateScripts>false</generateScripts>
                         <outputs>
                            <!-- bin directory -->
                            <output>
