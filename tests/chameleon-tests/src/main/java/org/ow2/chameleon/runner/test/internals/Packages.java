@@ -24,6 +24,7 @@ public class Packages {
     public static void wisdomtest(StringBuilder builder) {
         checkEmpty(builder);
         builder.append("org.ow2.chameleon.runner.test,");
+        builder.append("org.ow2.chameleon.runner.test.utils,");
         builder.append("org.ow2.chameleon.runner.test.shared");
     }
 

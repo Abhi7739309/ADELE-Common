@@ -59,7 +59,19 @@ public class ProbeBundleMaker {
             privates = privates + ", " + PACKAGES_TO_ADD;
             properties.put("Private-Package", privates);
         }
-        properties.put(Constants.INCLUDE_RESOURCE,"src/main/resources");
+        File mainResources = new File("src/main/resources");
+        File testResources = new File("src/test/resources");
+        StringBuilder includeResources = new StringBuilder("");
+        if(testResources.exists()){
+            includeResources.append("src/test/resources,");
+        }
+        if(mainResources.exists()){
+            includeResources.append("src/main/resources,");
+        }
+        if(includeResources.length()>1){
+            includeResources.deleteCharAt(includeResources.length());
+        }
+        properties.put(Constants.INCLUDE_RESOURCE,includeResources.toString());
         //TODO Check we don't have an activator already.
         properties.put(Constants.BUNDLE_ACTIVATOR, Activator.class.getName());
     }
