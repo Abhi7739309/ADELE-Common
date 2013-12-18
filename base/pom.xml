@@ -926,6 +926,7 @@
                   <extensions>true</extensions>
                   <configuration>
                      <generateScripts>false</generateScripts>
+                     <defaultOutputDirectory>applications</defaultOutputDirectory>
                   </configuration>
                </plugin>
          </plugins>
