@@ -136,13 +136,19 @@ public class DPFileInstaller extends AbstractDeployer implements BundleListener 
 			for (BundleInfo bundleInfo : dp.getBundleInfos()) {
 				String symbolicName = bundleInfo.getSymbolicName();
 				Bundle bundle = dp.getBundle(symbolicName);
-				int bundleState = bundle.getState();
-				if ((bundleState == Bundle.INSTALLED) || (bundleState == Bundle.RESOLVED))
-					try {
-						bundle.start();
-					} catch (BundleException e) {
-						// ignore it
-					}
+                if(bundle != null) {
+                    int bundleState = bundle.getState();
+                    if ((bundleState == Bundle.INSTALLED) || (bundleState == Bundle.RESOLVED)){
+                        try {
+                            bundle.start();
+                        } catch (BundleException e) {
+                            // ignore it
+                        }
+                    }
+                } else {
+                    System.err.println(symbolicName +" is not a bundle");
+                }
+
 			}
 		}
 	}

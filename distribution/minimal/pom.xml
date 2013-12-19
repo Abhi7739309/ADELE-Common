@@ -191,7 +191,11 @@ limitations under the License.
                               <IncludesArtifactId>slf4j-api</IncludesArtifactId>
                               <directory>bin</directory>
                            </output>
-                            
+                           <!-- Application directory --> 
+                           <output>
+                              <IncludesArtifactId>deployment.package.chameleon</IncludesArtifactId>
+                              <directory>applications</directory>
+                           </output>    
                         </outputs>
                      </configuration>
                   </plugin>
