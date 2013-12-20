@@ -1,1 +1,1 @@
-java %* -Dchameleon.home=.  -jar bin/felix.jar --interactive
+java %* -Dchameleon.home=%CD%  -jar bin/felix.jar --interactive
