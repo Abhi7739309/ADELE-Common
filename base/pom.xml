@@ -28,7 +28,7 @@
       <projectName>${project.artifactId}</projectName>
 
       <!-- ADELE Projects -->
-      <roseVersion>1.2.3-SNAPSHOT</roseVersion>
+      <roseVersion>1.2.3</roseVersion>
 
       <osgiDistribPlugin>1.1.0</osgiDistribPlugin>
       <!-- Common dependencies -->
