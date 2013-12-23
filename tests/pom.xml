@@ -30,11 +30,8 @@
 
 	<modules>
        
-        <module>chameleon-tests</module>
-      <!--
-         <module>distribution-tests</module>
-      <module>test-pojosr</module>
-      <module>test-pojosr-example</module>-->
+        <module>chameleon-runner</module>
+      
 	</modules>
    <build>
       <plugins>

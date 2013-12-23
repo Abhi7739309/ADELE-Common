@@ -11,7 +11,7 @@
         <relativePath>../../base</relativePath>
     </parent>
 
-    <artifactId>chameleon-tests</artifactId>
+    <artifactId>chameleon-runner</artifactId>
     <name>${productName} :: ${projectName}</name>
     <build>
         <plugins>
