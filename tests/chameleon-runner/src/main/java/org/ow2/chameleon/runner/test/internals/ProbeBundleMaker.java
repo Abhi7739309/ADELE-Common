@@ -69,7 +69,7 @@ public class ProbeBundleMaker {
             includeResources.append("src/main/resources,");
         }
         if(includeResources.length()>1){
-            includeResources.deleteCharAt(includeResources.length());
+            includeResources.deleteCharAt(includeResources.length()-1);
         }
         properties.put(Constants.INCLUDE_RESOURCE,includeResources.toString());
         //TODO Check we don't have an activator already.
