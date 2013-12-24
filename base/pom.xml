@@ -328,23 +328,6 @@
             <version>${servletAPIVersion}</version>
          </dependency>
 
-         <!-- Grizzly -->
-         <dependency>
-            <groupId>org.ow2.chameleon.commons.grizzly</groupId>
-            <artifactId>grizzly-bundle</artifactId>
-            <version>${grizzlyVersion}-0001-SNAPSHOT</version>
-         </dependency>
-         <dependency>
-              <groupId>org.glassfish.grizzly.osgi</groupId>
-              <artifactId>grizzly-httpservice</artifactId>
-              <version>${grizzlyVersion}</version>
-          </dependency>
-          <dependency>
-              <groupId>org.glassfish.gmbal</groupId>
-              <artifactId>gmbal-api-only</artifactId>
-              <version>${gmbalVersion}</version>
-          </dependency>
-
          <!-- Jetty -->
          <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -559,16 +542,6 @@
             <version>${roseVersion}</version>
          </dependency>
 
-         <dependency>
-            <groupId>org.ow2.chameleon.rose.atmosphere</groupId>
-            <artifactId>atmosgi-component</artifactId>
-            <version>${roseVersion}</version>
-         </dependency>
-         <dependency>
-            <groupId>org.ow2.chameleon.rose.atmosphere</groupId>
-            <artifactId>atmosgi-service</artifactId>
-            <version>${roseVersion}</version>
-         </dependency>
          <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
