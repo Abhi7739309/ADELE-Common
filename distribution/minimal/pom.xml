@@ -160,7 +160,7 @@ limitations under the License.
                            <output>
                               <IncludesArtifactId>chameleon-core</IncludesArtifactId>
                               <directory>bin</directory>
-                              <outputFileName>felix.jar</outputFileName>
+                              <outputFileName>chameleon-core.jar</outputFileName>
                            </output>
                            <output>
                               <IncludesArtifactId>commons-io</IncludesArtifactId>

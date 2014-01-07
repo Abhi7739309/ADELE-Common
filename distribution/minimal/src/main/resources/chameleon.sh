@@ -76,9 +76,9 @@ fi
 
 if test "$1" = "--interactive"; then
    echo $dir
-    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/felix.jar "$@"
+    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/chameleon-core.jar "$@"
 else
-    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/felix.jar "$@" &
+    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/chameleon-core.jar "$@" &
     echo $! > RUNNING_PID
 fi
 
