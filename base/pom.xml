@@ -36,7 +36,7 @@
       <iPojoVersion>1.11.2</iPojoVersion>
       <iPojoAPIVersion>${iPojoVersion}</iPojoAPIVersion>
       <iPojoMetadataVersion>1.6.0</iPojoMetadataVersion>
-      <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
+      <ipojoHandlerExtender>1.8.0</ipojoHandlerExtender>
       <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
       <ipojoWebconsole>1.7.0</ipojoWebconsole>
       <chameleonVersion>1.0.4</chameleonVersion>
