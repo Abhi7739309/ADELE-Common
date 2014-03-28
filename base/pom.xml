@@ -33,13 +33,13 @@
       <osgiDistribPlugin>1.1.0</osgiDistribPlugin>
       <!-- Common dependencies -->
       <!-- iPOJO -->
-      <iPojoVersion>1.11.0</iPojoVersion>
+      <iPojoVersion>1.11.2</iPojoVersion>
       <iPojoAPIVersion>${iPojoVersion}</iPojoAPIVersion>
       <iPojoMetadataVersion>1.6.0</iPojoMetadataVersion>
       <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
       <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
       <ipojoWebconsole>1.7.0</ipojoWebconsole>
-      <chameleonVersion>1.0.1</chameleonVersion>
+      <chameleonVersion>1.0.4</chameleonVersion>
       <!-- Logs -->
       <slf4jVersion>1.7.2</slf4jVersion>
       <log4jVersion>1.2.16</log4jVersion>
@@ -48,7 +48,7 @@
       <osgiVersion>4.3.1</osgiVersion>
       <osgiEnterpriseVersion>5.0.0</osgiEnterpriseVersion>
       <osgiCompendiumVersion>4.2.0</osgiCompendiumVersion>
-      <felixVersion>4.2.1</felixVersion>
+      <felixVersion>4.4.0</felixVersion>
       <fileinstallVersion>3.1.4</fileinstallVersion>
       <eventAdminVersion>1.3.0</eventAdminVersion>
       <gogoCommandVersion>0.12.0</gogoCommandVersion>
