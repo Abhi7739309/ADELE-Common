@@ -39,7 +39,7 @@
       <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
       <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
       <ipojoWebconsole>1.7.0</ipojoWebconsole>
-      <chameleonVersion>1.0.4</chameleonVersion>
+      <chameleonVersion>1.0.3</chameleonVersion>
       <!-- Logs -->
       <slf4jVersion>1.7.2</slf4jVersion>
       <log4jVersion>1.2.16</log4jVersion>
