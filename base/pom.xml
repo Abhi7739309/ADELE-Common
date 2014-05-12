@@ -39,13 +39,13 @@
         <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
         <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
         <ipojoWebconsole>1.7.0</ipojoWebconsole>
-        <chameleonVersion>1.0.4</chameleonVersion>
+        <chameleonVersion>1.0.7</chameleonVersion>
 
         <!-- Logs -->
         <slf4jVersion>1.7.6</slf4jVersion>
         <log4jVersion>1.2.16</log4jVersion>
         <felixLogVersion>1.0.1</felixLogVersion>
-        <logbackVersion>1.1.1</logbackVersion>
+        <logbackVersion>1.1.2</logbackVersion>
 
         <!-- OSGi and tools -->
         <osgiVersion>4.3.1</osgiVersion>
@@ -212,17 +212,6 @@
                 <artifactId>commons-io</artifactId>
                 <version>2.4</version>
             </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logbackVersion}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${logbackVersion}</version>
-            </dependency>
-
 
             <!-- chameleon core -->
             <dependency>
