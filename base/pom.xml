@@ -88,7 +88,7 @@
         <!-- plugins -->
         <bundlePluginVersion>2.3.7</bundlePluginVersion>
         <iPojoPluginVersion>${iPojoVersion}</iPojoPluginVersion>
-        <releasePluginVersion>2.3.2</releasePluginVersion>
+        <releasePluginVersion>2.4.2</releasePluginVersion>
         <surefirePluginVersion>2.12</surefirePluginVersion>
         <webdavPluginVersion>2.2</webdavPluginVersion>
         <compilerPluginVersion>2.5.1</compilerPluginVersion>
@@ -825,6 +825,13 @@
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                         <releaseProfiles>release</releaseProfiles>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-provider-gitexe</artifactId>
+                            <version>1.8.1</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
