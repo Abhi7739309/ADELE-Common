@@ -144,21 +144,6 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
-        <!-- Cilia -->
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>cilia-release</id>
-            <name>cilia-release</name>
-            <url>http://repository-cilia.forge.cloudbees.com/release</url>
-        </repository>
-        <repository>
-            <snapshots />
-            <id>cilia-snapshot</id>
-            <name>cilia-snapshot</name>
-            <url>http://repository-cilia.forge.cloudbees.com/snapshot</url>
-        </repository>
         <!-- ADELE repositories -->
         <repository>
             <snapshots>
