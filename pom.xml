@@ -48,6 +48,7 @@
             <module>deployment-package-extensions</module>
              <module>rose-chameleon-configuration</module>
             <module>distribution</module>
+             <module>tests</module>
          </modules>
       </profile>
    </profiles>
