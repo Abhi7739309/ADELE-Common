@@ -701,10 +701,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${compilerPluginVersion}</version>
                     <configuration>
-                        <!-- By default, compile Java 1.5 sources for JRE 1.5. for better support
-                           of 32 bit native libraries -->
-                        <source>1.6</source>
-                        <target>1.6</target>
+                        <source>1.8</source>
+                        <target>1.8</target>
                     </configuration>
                 </plugin>
 
