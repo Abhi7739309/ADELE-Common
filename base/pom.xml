@@ -39,30 +39,30 @@
         <ipojoHandlerExtender>1.4.0</ipojoHandlerExtender>
         <iPojoArchVersion>${iPojoVersion}</iPojoArchVersion>
         <ipojoWebconsole>1.7.0</ipojoWebconsole>
-        <chameleonVersion>1.0.7</chameleonVersion>
+        <chameleonVersion>1.10.8</chameleonVersion>
 
         <!-- Logs -->
-        <slf4jVersion>1.7.7</slf4jVersion>
+        <slf4jVersion>1.7.12</slf4jVersion>
         <log4jVersion>1.2.16</log4jVersion>
         <felixLogVersion>1.0.1</felixLogVersion>
-        <logbackVersion>1.1.2</logbackVersion>
+        <logbackVersion>1.1.3</logbackVersion>
 
         <!-- OSGi and tools -->
-        <osgiVersion>4.3.1</osgiVersion>
+        <osgiVersion>5.0.0</osgiVersion>
         <osgiEnterpriseVersion>5.0.0</osgiEnterpriseVersion>
-        <osgiCompendiumVersion>4.2.0</osgiCompendiumVersion>
-        <felixVersion>4.4.0</felixVersion>
+        <osgiCompendiumVersion>5.0.0</osgiCompendiumVersion>
+        <felixVersion>4.6.1</felixVersion>
         <fileinstallVersion>3.4.0</fileinstallVersion>
         <eventAdminVersion>1.3.2</eventAdminVersion>
-        <gogoCommandVersion>0.12.0</gogoCommandVersion>
-        <gogoRuntimeVersion>0.12.0</gogoRuntimeVersion>
+        <gogoCommandVersion>0.14.0</gogoCommandVersion>
+        <gogoRuntimeVersion>0.16.2</gogoRuntimeVersion>
         <gogoShellVersion>0.10.0</gogoShellVersion>
         <obrVersion>1.0.2</obrVersion>
         <pojosrVersion>0.2.1</pojosrVersion>
-        <configAdminVersion>1.8.0</configAdminVersion>
+        <configAdminVersion>1.8.4</configAdminVersion>
         <whiteboardVersion>2.2.2</whiteboardVersion>
         <sharedPreferencesVersion>0.2.0</sharedPreferencesVersion>
-        <guavaVersion>16.0.1</guavaVersion>
+        <guavaVersion>18.0</guavaVersion>
 
         <!-- REST, Web Server and web tools -->
         <servletAPIVersion>2.5</servletAPIVersion>
