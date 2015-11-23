@@ -1,4 +1,24 @@
 #!/bin/sh
+
+###
+# #%L
+# OW2 Chameleon - Core
+# %%
+# Copyright (C) 2009 - 2014 OW2 Chameleon
+# %%
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# #L%
+###
 PRG="$0"
 # resolve relative/absolute symlinks
 while [ -h "$PRG" ] ; do
@@ -74,11 +94,15 @@ if [ -f RUNNING_PID ]; then
     exit 1
 fi
 
+#CLASSPATH=$(JARS=("bin"/*.jar); IFS=:; echo "${JARS[*]}")
+for i in `ls ./bin/*.jar`
+do
+  CLASSPATH=${CLASSPATH}:${i}
+done
+
 if test "$1" = "--interactive"; then
-   echo $dir
-    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/chameleon-core.jar "$@"
+    "$JAVA" -cp ${CLASSPATH} ${JVM_ARGS} -Dchameleon.home=$dir org.ow2.chameleon.core.Main "$@"
 else
-    "$JAVA" ${JVM_ARGS} -Dchameleon.home=$dir -jar bin/chameleon-core.jar "$@" &
+    "$JAVA" -cp ${CLASSPATH} ${JVM_ARGS} -Dchameleon.home=$dir org.ow2.chameleon.core.Main "$@" &
     echo $! > RUNNING_PID
 fi
-
