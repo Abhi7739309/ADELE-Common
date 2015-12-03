@@ -91,7 +91,7 @@
         <releasePluginVersion>2.4.2</releasePluginVersion>
         <surefirePluginVersion>2.12</surefirePluginVersion>
         <webdavPluginVersion>2.2</webdavPluginVersion>
-        <compilerPluginVersion>2.5.1</compilerPluginVersion>
+        <compilerPluginVersion>3.3</compilerPluginVersion>
         <javadocPluginVersion>2.8.1</javadocPluginVersion>
         <licensePluginVersion>1.4.0</licensePluginVersion>
         <depgraphPluginVersion>3.1</depgraphPluginVersion>
@@ -99,7 +99,7 @@
         <deploymentPackageVersion>1.0.4</deploymentPackageVersion>
         <antPluginVersion>1.7</antPluginVersion>
         <gmavenPluginVersion>1.0</gmavenPluginVersion>
-        <assemblyPluginVersion>2.3</assemblyPluginVersion>
+        <assemblyPluginVersion>2.5.5</assemblyPluginVersion>
         <lifecyclePluginVersion>1.0.0</lifecyclePluginVersion>
         <failsafePluginVersion>2.12.4</failsafePluginVersion>
         <mavenDeployPlugin>2.7</mavenDeployPlugin>
