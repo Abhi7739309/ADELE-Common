@@ -715,6 +715,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <instructions>
+                            <_noee>true</_noee>
                             <!-- Default bundle headers -->
                             <Bundle-Name>${project.name}</Bundle-Name>
                             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
